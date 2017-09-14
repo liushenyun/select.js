@@ -41,6 +41,16 @@ var select = new Select($('.select-container'), {
         }, function(value) {
             console.log(value)
         });
+
+```
+
+###### 设置vaue
+```
+select.setSelectValue(data);
+```
+###### 获取vaue 传给后台的值
+```
+select.getSelectValue();
 ```
 
 
