@@ -1,10 +1,18 @@
 # select.js
 ul li编写的select插件
 ## 用法
+##### 引入的文件
+```
+<link rel="stylesheet" href="css/select.css">
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/selectJquery.js"></script>
+```
+
 #### HTML代码 HTML codes
 ```
 <div class="select-container"></div>
 ```
+
 
 #### Javascript代码 Javascript codes
 
