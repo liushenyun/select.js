@@ -1,0 +1,73 @@
+
+.select-container{
+    z-index: 100;
+    width: 216px;
+    height: 30px;
+    cursor: pointer;
+    margin: 40px;
+    display: inline-block;
+}
+.select-container1{
+    z-index: 100;
+    width: 216px;
+    height: 30px;
+    cursor: pointer;
+    margin: 40px;
+}
+
+
+.public-sel-select-outer{
+    position: relative;
+    height: 30px;
+    display: -webkit-flex;
+    display: -moz-box; /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox; /* 混合版本语法: IE 10 */
+    display: flex;
+    line-height: 30px;
+    background: #FFF;
+    border: 1px solid #C0D2E3;
+
+}
+.public-sel-title{
+    font-size: 12px;
+    color: #989FBD;
+    padding: 0 6px;
+}
+.public-sel-selected{
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+}
+.public-sel-tu{
+    width: 30px;
+    text-align: center;
+}
+.public-sel-tu>img{
+    width: 12px;
+    height: 7px;
+}
+.public-sel-list{
+    position: absolute;
+    left: 0;
+    top: 29px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: none;
+    background: #FFF;
+    box-shadow:0 2px 3px 1px rgba(0,0,0,0.1);
+
+}
+.public-sel-list>li{
+    font-size: 12px;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    padding-left: 20px;
+}
+.public-sel-list>li:hover{
+    background: #3F74F9;
+    color: #FFF;
+}

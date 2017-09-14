@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>下拉框</title>
+    <link rel="stylesheet" href="../global/css/base.css">
+    <link rel="stylesheet" href="css/select.css">
+</head>
+
+<body>
+    <div class="select-container"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="select-container1"></div>
+    <!--真实结构-->
+    <!--<div class="public-sel-select-outer">-->
+    <!--<div class="public-sel-title">充值总额度</div>-->
+    <!--<div class="public-sel-selected user-total-selected" index="0">-&#45;&#45;</div>-->
+    <!--<div class="public-sel-tu">-->
+    <!--<img src="img/ic_more_down.png" alt="">-->
+    <!--</div>-->
+    <!--<ul class="public-sel-list">-->
+    <!--&lt;!&ndash;<li>-&#45;&#45;</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>累计10000以上</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>5k-1w</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>1k-5k</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>100-1k</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>0-100</li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li>未充值过</li>&ndash;&gt;-->
+    <!--</ul>-->
+    <!--</div>-->
+    <div onclick="getValue()">获取选择的值</div>
+    <div onclick="setValue(3)">设置选择的值</div>
+
+    <script src="js/jquery-1.12.2.min.js"></script>
+    <script src="js/selectJquery.js"></script>
+    <script>
+        var selectData = {
+                // data: ['---', '累计10000以上', '5k-1w', '1k-5k', '100-1k', '0-100', '未充值过'],
+            data: [{ name: "---", value: '5' }, {
+                name: "累计10000以上",
+                value: '-1'
+            }, {
+                name: "5k-1w",
+                value: '7'
+            }, {
+                name: "1k-5k",
+                value: '8'
+            }, {
+                name: "100-1k",
+                value: '9'
+            },],
+            title: '充值金额'
+        },
+            firstSelect, firstSelect1;
+        var selectData1 = {
+                data: [{name:'aaaaaa',value:'a'},{name:'bbb',value:'b'},{name:'ccc',value:'c'},{name:'ddd',value:'10'}],
+                title: '充值金额'
+            };
+
+        firstSelect = new Select($('.select-container'), {
+            data: selectData.data,
+            title: selectData.title
+        }, function(data) {
+            console.log(data)
+        });
+
+
+        function getValue() {
+            console.log(firstSelect.getSelectValue())
+            console.log(firstSelect1.getSelectValue())
+        }
+
+
+        function setValue(data) {
+            firstSelect.setSelectValue(data);
+            firstSelect1.setSelectValue(data);            
+            
+        }
+
+
+        firstSelect1 = new Select($('.select-container1'), {
+            data: selectData1.data,
+            title: selectData1.title
+        }, function(data) {
+            console.log(data)
+        });
+    </script>
+</body>
+
+</html>
